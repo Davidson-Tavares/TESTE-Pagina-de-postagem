@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postapp</title>
+    <style>
+         body{background-color: aquamarine;}
+
+        #container{
+            width: 600px auto;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+            margin-left: 10%; 
+            margin-right: 10%;
+        }
+
+        #posts{
+            border: 6px solid  rgb(8, 198, 198);
+            border-radius: 10px;
+             background-color:  aqua;
+            margin-bottom: 10px;
+           
+            text-align: center;
+            
+        }
+         .menu {
+            background-color: rgb(88, 88, 238);
+            text-align: center;
+            font-size: 25px;
+            }
+
+            .menu1 {
+            background-color:  aqua;
+            text-align: left;
+            font-size: 15px;
+            border-radius: 10px;
+            }
+
+            #bot{
+                background-color: rgb(203, 87, 96);
+                margin-bottom: 5px;
+                color: aliceblue;
+                border-radius: 5px;
+                display: flex;
+                margin-left: 95%;
+                margin-bottom: -15px;
+
+               
+
+            }
+    </style>
+  
+</head>
+<body>
+     <div class="menu" >
+         <h1> POSTAPP </h1>
+    </div>
+
+  
+
+   <div id="container">
+        
+        <div class="menu1"> <h1 >Lista de Posts :</h1></div>
+        
+            {{#each posts}}
+            <div id="posts">
+                <a href="/deletar/{{id}}" > <button id="bot" > X  </button> </a>
+
+            <h1>{{titulo}}</h1>
+            <p>{{conteudo}}</p>
+
+           
+            
+            <small>{{createdAt}}</small>
+             </div>
+            {{/each}}
+       
+    </div>
+
+    
+</body>
+</html>
+
+
+
